@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NEARWhales</title>
+    <link rel="icon" href="images/mission.jpg" type="image/jpeg">
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/slick.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+<div id="root">
+    <div id="Top" class="App">
+
+        <div id="Coin" class="coinflip-container">
+            <div class="nav-welcome">
+                <div class="welcome-bd"></div>
+                <div class="navbar">
+                    <div class="web-nav">
+                        <div class="logo" onclick="hideCoin('NoCoin','Coin')">
+                            <img src="images/logo.png" alt="">
+                        </div>
+
+                        <div class="nav-links">
+                            <a href="#RoadMap">Roadmap</a>
+                            <a href="#FAQ">FAQ</a>
+                            <a onclick="openCoin('NoCoin','Coin')">Coinflip</a>
+                        </div>
+
+                        <div class="external-link">
+                            <a target="_blank" href="https://discord.gg/NSv7bd9X" rel="noreferrer">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFCSURBVHgBvZXLUcNAEEQbc+GoEJYIgAhYMiAD5AiACDAZQATyEU44A8ENTiYDKQP7yM302LNVW/uRBMh01bM1s5/en7RAWgUpSUUacpWpZ8iS1ORa40GSii9kRTYejeYbj1rZBEjO9hnNEw1/gwy0yJmUI5k4qpxRM7KRYF3nE/2XhMH4ugwTc4w/m2ivij2ZOEoxkaWzSGtN7skxmWocakHOyAX5zPRz7h4eMiO5CRrMEL9bvmRlVkgv33ZGJ0grHOFrTywzbhFLBmDEyCCt0yA2PXEu58yymyhLY7WiRfo9u/M6qjr6Kg/0Yd+aTvBPEqN1pmyBn0kOT5spaw/584HdHoRf23dyS940/iJHyrYxdifvmTzqgK1X7iRlT35ihnjDKwyTRXwAanTcS+5mXaqpwXC5C7PCgIvvLyrQcdl9A8EzyqkmtpQDAAAAAElFTkSuQmCC" alt="">
+                            </a>
+                            <a target="_blank" href="https://twitter.com/ACeredov" rel="noreferrer">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEbSURBVHgBrZRPFsEwEMY/bCzdQI7gCJyAG+AE3AA3cAO9ga1d6wTcoLW0qqVdzbQpEWkz6Pfe772kSeZfk2nhP/UIpcdnyWapFBESmUFMTA1bK7ycY0bsIZPSxrIKTkRKbM1DgbGoPA6CGuMlnN3CyOjtEEc3rnGQCeFgn2VfOjZwyYaWcSU0HsH6pzxJKzZzRjud8kToYGcFlkcqPSxhbTsI9ELakIOxK4OsQQZwKGzIeIwK9SC741/Vv2OM7yiu4bUqRaHmxK2ctPGZxRS/a0Mkvk3cQxqrfcfx7UBc9LgLWZdNiBGM0vhUtlvJu+DIlc+Y0vBr3kL+4EL4u2+uNep7vMvwUGK4Zc0nmj6Kq1rWP9EcUXTKCEI9APMq6qXlFTi1AAAAAElFTkSuQmCC" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="coinflip">
+                    <h1>Coming soon...</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-coin" id="NoCoin">
+            <div class="nav-welcome">
+                <div class="welcome-bd"></div>
+                <div class="navbar">
+                    <div class="web-nav">
+                        <div class="logo" onclick="hideCoin('NoCoin','Coin')">
+                            <img src="images/logo.png" alt="">
+                        </div>
+
+                        <div class="nav-links">
+                            <a href="#RoadMap">Roadmap</a>
+                            <a href="#FAQ">FAQ</a>
+                            <a class="coming-soon" onclick="openCoin('NoCoin','Coin')">Coinflip</a>
+                        </div>
+
+                        <div class="external-link">
+                            <a target="_blank" href="https://discord.gg/NSv7bd9X" rel="noreferrer">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFCSURBVHgBvZXLUcNAEEQbc+GoEJYIgAhYMiAD5AiACDAZQATyEU44A8ENTiYDKQP7yM302LNVW/uRBMh01bM1s5/en7RAWgUpSUUacpWpZ8iS1ORa40GSii9kRTYejeYbj1rZBEjO9hnNEw1/gwy0yJmUI5k4qpxRM7KRYF3nE/2XhMH4ugwTc4w/m2ivij2ZOEoxkaWzSGtN7skxmWocakHOyAX5zPRz7h4eMiO5CRrMEL9bvmRlVkgv33ZGJ0grHOFrTywzbhFLBmDEyCCt0yA2PXEu58yymyhLY7WiRfo9u/M6qjr6Kg/0Yd+aTvBPEqN1pmyBn0kOT5spaw/584HdHoRf23dyS940/iJHyrYxdifvmTzqgK1X7iRlT35ihnjDKwyTRXwAanTcS+5mXaqpwXC5C7PCgIvvLyrQcdl9A8EzyqkmtpQDAAAAAElFTkSuQmCC" alt="">
+                            </a>
+                            <a target="_blank" href="https://twitter.com/ACeredov" rel="noreferrer">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEbSURBVHgBrZRPFsEwEMY/bCzdQI7gCJyAG+AE3AA3cAO9ga1d6wTcoLW0qqVdzbQpEWkz6Pfe772kSeZfk2nhP/UIpcdnyWapFBESmUFMTA1bK7ycY0bsIZPSxrIKTkRKbM1DgbGoPA6CGuMlnN3CyOjtEEc3rnGQCeFgn2VfOjZwyYaWcSU0HsH6pzxJKzZzRjud8kToYGcFlkcqPSxhbTsI9ELakIOxK4OsQQZwKGzIeIwK9SC741/Vv2OM7yiu4bUqRaHmxK2ctPGZxRS/a0Mkvk3cQxqrfcfx7UBc9LgLWZdNiBGM0vhUtlvJu+DIlc+Y0vBr3kL+4EL4u2+uNep7vMvwUGK4Zc0nmj6Kq1rWP9EcUXTKCEI9APMq6qXlFTi1AAAAAElFTkSuQmCC" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="welcome">
+                    <div class="welcome-left">
+                        <h3>100 Uniquely randomly generated<br/>
+                            whales flex on the Near Blockchain<br/>
+                            Mint Data: TBA<br/>
+                            Mint Price: 2 NEAR
+                        </h3>
+                    </div>
+                    <img src="images/welcome-images.jpg" alt="">
+                </div>
+
+                <div class="join-community">
+                    <a target="_blank" href="https://discord.gg/NSv7bd9X" rel="noreferrer">
+                        Join the NEARWhales community
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mission">
+                <div class="mission-left">
+                    <h1>Our mission</h1>
+                    <p>
+                        Our mission is to create the strongest and friendliest community on the Near blockchain,
+                        we tried and created random 100 nft whales, they are one of the largest mammals on planet earth.
+                        They have a fairly extensive list of various customization options.
+                        Each of the categories was drawn manually by our designer.
+                        For your information, this is the first collection on Near that will be associated specifically with the whale,
+                        it is very important for us that you believe in our project and in our long roadmap.
+                        This year has already started with bad news, but our project will break through the wall of sadness and give you a huge amount
+                        of positive emotions. The main thing is that the community should be strong and believing in us.
+                        And we will show all our strength and the power of our team. We will strengthen our community with the help
+                        of our partners who have projects related to other animals, we will create an animal kingdom and will be leaders
+                        on the Near blockchain.
+                    </p>
+                </div>
+                <img src="images/mission.jpg" alt="">
+                <h1 class="mob-header">Our mission</h1>
+            </div>
+
+            <div class="collection">
+                <button type="button" class="slick-prev" id="prev">
+                    <svg class="arrow-left" viewbox="0 0 60 100">
+                        <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"/>
+                    </svg>
+                </button>
+                <h1>The NEARWhales</h1>
+                <button type="button" class="slick-next" id="next">
+                    <svg class="arrow-right" viewbox="0 0 60 100">
+                        <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"/>
+                    </svg>
+                </button>
+                <div class="my-slider">
+                    <div class="my-slide">
+                        <img src="images/slide1.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide3.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide2.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide4.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide9.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide13.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide11.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide19.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide10.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide17.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide7.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide11.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide15.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide21.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide8.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide14.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide20.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide5.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide6.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide12.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide16.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide18.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide22.jpg" alt=""/>
+                    </div>
+                    <div class="my-slide">
+                        <img src="images/slide23.jpg" alt=""/>
+                    </div>
+                </div>
+            </div>
+
+            <div id="RoadMap" class="roadmap web">
+                <h1>Roadmap</h1>
+                <div class="road-list">
+                    <div class="right-container">
+                        <div class="road left">
+                            <div class="arrow left"></div>
+                            <div class="road-road">
+                                <span class="road-name"><span>01</span> Phase 1</span>
+                                <p class="road-content">🐳 -Development and start of drawing customization items</p>
+                                <p class="road-content">🐳 -Generation of one hundred random NFT's</p>
+                                <p class="road-content">🐳 -Launch of discord and twitter, as well as the beginning of the development of a website to showcase our work and the team</p>
+                                <p class="road-content">🐳 -Start building relationships with other projects and planning wl sweepstakes</p>
+                            </div>
+                            <div class="pile-connector"></div>
+                        </div>
+                        <div class="road left">
+                            <div class="arrow left"></div>
+                            <div class="road-road">
+                                <span class="road-name"><span>03</span> Phase 3</span>
+                                <p class="road-content">🔺- We decided to make a site NEARWhales Coinflip, you may have already seen something like this, but we will have several games on our site!</p>
+                                <p class="road-content">🔺- Opening a stake pool, together with the Paras platform</p>
+                                <p class="road-content">🔺- Baby NEARWhales- gen 2</p>
+                                <p class="road-content">🔺- Developing your own game based on our collections.</p>
+                            </div>
+                            <div class="pile-connector"></div>
+                        </div>
+                    </div>
+
+                    <div class="roads-pile web"></div>
+
+                    <div class="left-container">
+                        <div class="road right">
+                            <div class="pile-connector"></div>
+                            <div class="road-road">
+                                <span class="road-name"><span>02</span> Phase 2</span>
+                                <p class="road-content">🐋 -The long-awaited mint NEARWhales 🎉</p>
+                                <p class="road-content">🐋 -Distribution of gifts to holders and numerous contests</p>
+                                <p class="road-content">🐋 -Entry into the secondary Paras market</p>
+                                <p class="road-content">🐋 -Checking holders and developing a DAO</p>
+                                <p class="road-content">🐋 -We will also devote part of the profit to cleaning the floor from paperhands 🧹</p>
+                            </div>
+                            <div class="arrow right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="FAQ" class="faq-component">
+                <h1>FAQ</h1>
+                <div class="acor-container">
+                    <div class="acor-block">
+                        <input type="checkbox" name="acor" id="acor1"/>
+                        <label for="acor1">1) What is NEARWhales supply?</label>
+                        <div class="acor-body">
+                            <p>- 100</p>
+                        </div>
+                    </div>
+                    <div class="acor-block">
+                        <input type="checkbox" name="acor" id="acor2" />
+                        <label for="acor2">2) When is mint?</label>
+                        <div class="acor-body">
+                            <p>- There is no exact date yet, follow the news in Discord</p>
+                        </div>
+                    </div>
+                    <div class="acor-block">
+                        <input type="checkbox" name="acor" id="acor3" />
+                        <label for="acor3">3) What is the price?</label>
+                        <div class="acor-body">
+                            <p>- 2 Near</p>
+                        </div>
+                    </div>
+                    <div class="acor-block">
+                        <input type="checkbox" name="acor" id="acor4" />
+                        <label for="acor4">4) How many can i mint?</label>
+                        <div class="acor-body">
+                            <p>
+                                - Wl ( 3 per wallet)<br/>
+                                - Public sale (2 per wallet)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="acor-block">
+                        <input type="checkbox" name="acor" id="acor5" />
+                        <label for="acor5">5) Which wallet can i use?</label>
+                        <div class="acor-body">
+                            <p>- Near Wallet</p>
+                        </div>
+                    </div>
+                    <div class="acor-block">
+                        <input type="checkbox" name="acor" id="acor6" />
+                        <label for="acor6">6) Secondary market?</label>
+                        <div class="acor-body">
+                            <p>- Paras</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="bottom-image"></div>
+        <div class="footer">
+            <a href="#Top">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="to-top-page" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M256 464c114.9 0 208-93.1 208-208S370.9 48 256 48 48 141.1 48 256s93.1 208 208 208zm0-244.5l-81.1 81.9c-7.5 7.5-19.8 7.5-27.3 0s-7.5-19.8 0-27.3l95.7-95.4c7.3-7.3 19.1-7.5 26.6-.6l94.3 94c3.8 3.8 5.7 8.7 5.7 13.7 0 4.9-1.9 9.9-5.6 13.6-7.5 7.5-19.7 7.6-27.3 0l-81-79.9z">
+                    </path>
+                </svg>
+            </a>
+            <a href="">Read our Terms & Conditions</a>
+            <span>© 2022 NEARWhales</span>
+            <div style="display: flex; align-items: center;">
+                <a target="_blank" href="https://discord.gg/NSv7bd9X" rel="noreferrer">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAUCAYAAACTQC2+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFDSURBVHgBvZWBccIwDEUVrgNkBHeCthM0TNB2AswEZYO2G7QTpBuUDdINgAmcDcIGQgL5CMIicCS8ux+frCDJRLYBEiBiTvKkkhRIE+M9R1qQKtI723AO8sM/UoOHBJkPLVUiDc8VXYl+sR+40NxK4rFfSitRwP4pYvyRJOEJB/3zepCI8DAME4zfCnetPCQ+rqgwqlmTvkj3pKnYmjnpiTQmLY04z3FF30Yls/bbZH8qf1B+/meaRJwmrujBqERX+H/KzrKMV1zDMVyA40QO0jwq23XY1tw2GaBNQNkHPGJ6n32In6suT8TyGT9heKYjuBGcaG345nAZ3Dy14avv6PFG4gPQKScXMJb5FxlZ8VSuJfhKRu7eWSLJD7Q7WPZJUB8xfQIrpFk0FVr3Eu5v1oUkdXAmuL8wS+y6+K5Biswt/wabR+XJTe1SgAAAAABJRU5ErkJggg==" alt="">
+                </a>
+                <a target="_blank" href="https://twitter.com/ACeredov" rel="noreferrer">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEjSURBVHgBrZSBccIwDEVlJmCDZoSOkA1KJ4BO0G5Q2CAjmAkYIWEC2MBhAthAfN1ZhwkmEQn/7p1zifylWLYdTRAzzzEU8uycO1qCrcYFqPleASzVC/xLnE5Ygd0L5oGf6wDOoEon+eRjMZDA87Bq8Kt/1J0UwFdPAquk2LlO+ssE7ECZWR6LGjV32hQMAeQa3YIGyC45AUuvPHbVT1pZCRb8Pq3VexbHVazsQu/RoZvAx9F8FgZ0enjDjwdnrELqO0uev8GWpmubTYCuy/ofaXoSn00QJT1Y0nhtUGjbG4E1rHicAlnF8fLj/kvtzpwH7rBuAr1uz5PNo1kRkdNcGY1FNVsqR9Ca7cuhxiUZ5DqJFhiED/BJt5PdRvagwU5pyKgrKnDyEsep1JEAAAAASUVORK5CYII=" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
